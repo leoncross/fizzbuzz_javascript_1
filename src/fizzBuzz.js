@@ -4,14 +4,13 @@ var Fizzbuzz = function () {};
 Fizzbuzz.prototype.says = function(number) {
   if (this._isDivisibleBy(number, 15)) {
     return "Fizzbuzz";
-  }
-  if (this._isDivisibleBy(number, 3)) {
+  } else if (this._isDivisibleBy(number, 3)) {
     return "Fizz";
-  }
-  if (this._isDivisibleBy(number, 5)) {
+  } else if (this._isDivisibleBy(number, 5)) {
     return "Buzz";
+  } else {
+    return number
   }
-  return number
 }
 
 Fizzbuzz.prototype._isDivisibleBy = function(number, divisor) {
@@ -20,9 +19,7 @@ Fizzbuzz.prototype._isDivisibleBy = function(number, divisor) {
 
 var fizzbuzz = new Fizzbuzz();
 
-
 var number
 for (number = 1; number < 21; number++) {
-  console.log(fizzbuzz.says(number))
-
+  console.log(fizzbuzz.says(number));
 }
