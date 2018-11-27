@@ -9,15 +9,15 @@ describe('Fizzbuzz', function() {
 
   describe('knows when a number is', function() {
     it('divisible by 3', function() {
-      expect(fizzbuzz.isDivisibleByThree(3)).toBe(true);
+      expect(fizzbuzz._isDivisibleBy(3, 3)).toBe(true);
     });
 
     it('divisible by 5', function() {
-      expect(fizzbuzz.isDivisibleByFive(5)).toBe(true);
+      expect(fizzbuzz._isDivisibleBy(5, 5)).toBe(true);
     });
 
     it('divisible by 15', function() {
-      expect(fizzbuzz.isDivisibleByFifteen(15)).toBe(true);
+      expect(fizzbuzz._isDivisibleBy(15, 15)).toBe(true);
     });
 
   });
@@ -25,15 +25,15 @@ describe('Fizzbuzz', function() {
   describe('knows when a number is NOT', function() {
 
     it('divisible by 3', function() {
-      expect(fizzbuzz.isDivisibleByThree(1)).toBe(false);
+      expect(fizzbuzz._isDivisibleBy(1, 3)).toBe(false);
     });
 
     it('divisible by 5', function() {
-      expect(fizzbuzz.isDivisibleByFive(1)).toBe(false);
+      expect(fizzbuzz._isDivisibleBy(1, 5)).toBe(false);
     });
 
     it('divisible by 15', function() {
-      expect(fizzbuzz.isDivisibleByFifteen(1)).toBe(false);
+      expect(fizzbuzz._isDivisibleBy(1, 15)).toBe(false);
     });
 
   });
